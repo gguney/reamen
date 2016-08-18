@@ -11,6 +11,6 @@
 |
 */
 
-$app->get('/{id}', [
+$app->get('/', [
     'as' => 'index', 'uses' => 'MainController@index'
 ]);

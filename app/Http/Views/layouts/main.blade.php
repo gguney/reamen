@@ -2,29 +2,30 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Basic Example</title>
-    <link rel="stylesheet" href="../shared/css/base.css" />
-  </head>
-  <body>
-    <h1>Basic Example</h1>
-    <div id="container">
-      <p>
-        To install React, follow the instructions on
-        <a href="https://github.com/facebook/react/">GitHub</a>.
-      </p>
-      <p>
-        If you can see this, React is <strong>not</strong> working right.
-        If you checked out the source from GitHub make sure to run <code>grunt</code>.
-      </p>
-    </div>
-    <h4>Example Details</h4>
-    <p>This is written in vanilla JavaScript (without JSX) and transformed in the browser.</p>
-    <p>
-      Learn more about React at
-      <a href="https://facebook.github.io/react" target="_blank">facebook.github.io/react</a>.
-    </p>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/6.1.19/browser.min.js"></script>
     <script src="../../build/react.js"></script>
     <script src="../../build/react-dom.js"></script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script>
+var Greeter = React.createClass({
+  render: function () {
+    return (
+      <div>
+        <h1>Hello React!</h1>
+        <p>This is form a component!</p>
+      </div>
+    );
+  }
+});
+
+ReactDOM.render(
+  <Greeter/>,
+  document.getElementById('app')
+);
+
+    </script>
     @yield('script')
   </body>
 </html>

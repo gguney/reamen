@@ -12,7 +12,7 @@ class MainController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function index($id)
+    public function index()
     {
         return View("index");
     }
